@@ -20,8 +20,17 @@ from blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    #page paths
     path('', views.home, name='home'),
     path('add/', views.add_post, name='add_post'),
     path('edit/<int:post_id>/', views.edit_post, name='edit_post'),
     path('delete/<int:post_id>/', views.delete_post, name='delete_post'),
+
+    #authentication paths
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
+    path('signup/', views.signup_view, name='signup'),
+
+    path('account/', views.account_page, name='account'),
 ]
