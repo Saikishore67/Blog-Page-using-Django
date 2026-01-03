@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9fafc;
+    background-color: #F0F4FF;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #3b82f6;
+    background-color: #202A44;
     color: white;
     padding: 15px;
     text-align: center;
 }
 
 header a {
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -22,18 +22,21 @@ header a {
 header a:hover {
     text-decoration: underline;
 }
-
+/* my posts block */
 .container {
     width: 80%;
     margin: 30px auto;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     padding: 20px;
 }
 
-h1, h2 {
-    color: #333;
+h1 {
+    color: #F5C542
+}
+h2 {
+    color: #434141;
 }
 
 button, input[type=submit] {
@@ -59,4 +62,122 @@ a.btn {
 
 a.btn:hover {
     background-color: #059669;
+}
+
+
+
+input, button {
+    width: auto;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.post-card {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    /* Shadow for elevation */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* Smooth hover effect */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.post-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Content styling */
+.post-card p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Post action links */
+.post-card .actions a {
+    color: #007bff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.post-card .actions a:hover {
+    text-decoration: underline;
+}
+
+/* Wrapper for the signup form */
+.form-wrapper {
+    max-width: 400px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+
+/* Heading */
+.form-wrapper h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+.form-wrapper label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Inputs */
+.form-wrapper input[type="text"],
+.form-wrapper input[type="password"] {
+    width: 100%;               /* fill the block width */
+    max-width: 300px;          /* cap size so they don’t stretch too wide */
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+.form-wrapper button {
+    padding: 8px 14px;
+    font-size: 14px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-wrapper button:hover {
+    background-color: #2563eb;
+}
+
+/* Login link */
+.form-wrapper a {
+    display: block;
+    margin-top: 15px;
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
 }
