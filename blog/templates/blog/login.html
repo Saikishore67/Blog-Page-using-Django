@@ -1,0 +1,43 @@
+{% extends 'blog/auth_base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<div class="form-wrapper">
+    
+</div>
+<body>
+    <div class="form-wrapper">
+        <h2>Login</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color:red;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <label>Username:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+
+    </div>
+    
+</body>
+</html>
+{% endblock %}
